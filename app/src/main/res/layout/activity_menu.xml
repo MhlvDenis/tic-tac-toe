@@ -81,6 +81,7 @@
     </LinearLayout>
 
     <Button
+        android:id="@+id/score_table"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="@+id/play"

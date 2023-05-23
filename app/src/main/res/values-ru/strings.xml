@@ -11,4 +11,8 @@
     <string name="play">Играть</string>
     <string name="select_player">Выберите игрока</string>
     <string name="score_table">Результаты</string>
+    <string name="x_player">Крестики:</string>
+    <string name="o_player">Нолики:</string>
+    <string name="player_plug">Игрок</string>
+    <string name="winner">Победитель:</string>
 </resources>

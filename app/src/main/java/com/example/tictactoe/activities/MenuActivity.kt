@@ -23,5 +23,8 @@ class MenuActivity : AppCompatActivity() {
             finish()
             startActivity(Intent(this, MainActivity::class.java))
         }
+        binding.scoreTable.setOnClickListener {
+            startActivity(Intent(this, StatisticsActivity::class.java))
+        }
     }
 }

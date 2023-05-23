@@ -10,4 +10,8 @@
     <string name="play">Play</string>
     <string name="select_player">Select player</string>
     <string name="score_table">Score table</string>
+    <string name="x_player">X player:</string>
+    <string name="o_player">O player:</string>
+    <string name="player_plug">Player</string>
+    <string name="winner">Winner:</string>
 </resources>
