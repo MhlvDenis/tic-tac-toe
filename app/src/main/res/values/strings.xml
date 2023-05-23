@@ -6,4 +6,8 @@
     <string name="zeroes_won">Zeroes won</string>
     <string name="draw">Draw</string>
     <string name="return_to_main_menu">Return to main menu</string>
+    <string name="x_o">X / O</string>
+    <string name="play">Play</string>
+    <string name="select_player">Select player</string>
+    <string name="score_table">Score table</string>
 </resources>

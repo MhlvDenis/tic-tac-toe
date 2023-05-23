@@ -4,12 +4,16 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.tictactoe.other.Constants
+import com.example.tictactoe.players.PlayersManager
+import com.example.tictactoe.statistics.StatisticsManager
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
-class MainViewModel : ViewModel() {
-//    val currentPlayer = MutableLiveData(Constants.CROSS)
-//    val winner = MutableLiveData(Constants.EMPTY)
-//    val isBoardFilled = MutableLiveData(false)
-
+@HiltViewModel
+class MainViewModel @Inject constructor(
+    private val playersManager: PlayersManager,
+    private val statisticsManager: StatisticsManager
+): ViewModel() {
     private val _currentPlayer = MutableLiveData(Constants.CROSS)
     val currentPlayer: LiveData<String> = _currentPlayer
 

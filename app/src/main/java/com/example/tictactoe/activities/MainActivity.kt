@@ -1,5 +1,6 @@
 package com.example.tictactoe.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -10,7 +11,9 @@ import com.example.tictactoe.R
 import com.example.tictactoe.databinding.ActivityMainBinding
 import com.example.tictactoe.other.Constants
 import com.example.tictactoe.viewmodels.MainViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     private val mainViewModel: MainViewModel by viewModels()
     private lateinit var binding: ActivityMainBinding
@@ -50,7 +53,8 @@ class MainActivity : AppCompatActivity() {
         AlertDialog.Builder(this)
             .setTitle(message)
             .setPositiveButton(getString(R.string.return_to_main_menu)) { _, _ ->
-
+                finish()
+                startActivity(Intent(this, MenuActivity::class.java))
             }
             .setCancelable(false)
             .show()
