@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Tic Tac Toe</string>
-    <string name="put_crosses">Put Crosses</string>
+    <string name="put_cross">Put Cross</string>
+    <string name="put_zero">Put Zero</string>
+    <string name="crosses_won">Crosses won</string>
+    <string name="zeroes_won">Zeroes won</string>
+    <string name="draw">Draw</string>
+    <string name="return_to_main_menu">Return to main menu</string>
 </resources>

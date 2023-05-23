@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Крестики-нолики</string>
+    <string name="put_cross">Поставьте крестик</string>
+    <string name="put_zero">Поставьте нолик</string>
+    <string name="crosses_won">Победили крестики</string>
+    <string name="zeroes_won">Победили нолики</string>
+    <string name="draw">Ничья</string>
+    <string name="return_to_main_menu">В главное меню</string>
+</resources>

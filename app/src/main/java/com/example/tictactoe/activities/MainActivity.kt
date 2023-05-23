@@ -6,6 +6,7 @@ import android.widget.Button
 import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.Observer
+import com.example.tictactoe.R
 import com.example.tictactoe.databinding.ActivityMainBinding
 import com.example.tictactoe.other.Constants
 import com.example.tictactoe.viewmodels.MainViewModel
@@ -24,23 +25,23 @@ class MainActivity : AppCompatActivity() {
         mainViewModel.currentPlayer.observe(this@MainActivity, Observer {
             val currentPlayer = it ?: return@Observer
             if (currentPlayer == Constants.CROSS) {
-                binding.putTV.text = "Put Cross"
+                binding.putTV.text = getString(R.string.put_cross)
             } else {
-                binding.putTV.text = "Put Zero"
+                binding.putTV.text = getString(R.string.put_zero)
             }
         })
         mainViewModel.winner.observe(this@MainActivity, Observer {
             val winner = it ?: return@Observer
             if (winner == Constants.CROSS) {
-                provideGameFinished("Crosses won")
+                provideGameFinished(getString(R.string.crosses_won))
             } else if (winner == Constants.ZERO) {
-                provideGameFinished("Zeroes won")
+                provideGameFinished(getString(R.string.zeroes_won))
             }
         })
         mainViewModel.isBoardFilled.observe(this@MainActivity, Observer {
             val isBoardFilled = it ?: return@Observer
             if (isBoardFilled) {
-                provideGameFinished("Draw")
+                provideGameFinished(getString(R.string.draw))
             }
         })
     }
@@ -48,7 +49,7 @@ class MainActivity : AppCompatActivity() {
     private fun provideGameFinished(message: String) {
         AlertDialog.Builder(this)
             .setTitle(message)
-            .setPositiveButton("Return to menu") { _, _ ->
+            .setPositiveButton(getString(R.string.return_to_main_menu)) { _, _ ->
 
             }
             .setCancelable(false)

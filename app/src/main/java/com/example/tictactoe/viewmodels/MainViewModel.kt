@@ -1,13 +1,23 @@
 package com.example.tictactoe.viewmodels
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.tictactoe.other.Constants
 
 class MainViewModel : ViewModel() {
-    val currentPlayer = MutableLiveData(Constants.CROSS)
-    val winner = MutableLiveData(Constants.EMPTY)
-    val isBoardFilled = MutableLiveData(false)
+//    val currentPlayer = MutableLiveData(Constants.CROSS)
+//    val winner = MutableLiveData(Constants.EMPTY)
+//    val isBoardFilled = MutableLiveData(false)
+
+    private val _currentPlayer = MutableLiveData(Constants.CROSS)
+    val currentPlayer: LiveData<String> = _currentPlayer
+
+    private val _winner = MutableLiveData(Constants.EMPTY)
+    val winner: LiveData<String> = _winner
+
+    private val _isBoardFilled = MutableLiveData(false)
+    val isBoardFilled: LiveData<Boolean> = _isBoardFilled
 
     private val board = arrayOf(
         arrayOf(Constants.EMPTY, Constants.EMPTY, Constants.EMPTY),
@@ -23,11 +33,11 @@ class MainViewModel : ViewModel() {
             board[row][col] = currentPlayerValue
 
             if (checkWinner(currentPlayerValue)) {
-                winner.postValue(currentPlayerValue)
+                _winner.postValue(currentPlayerValue)
             } else if (checkIsBoardFilled()) {
-                isBoardFilled.postValue(true)
+                _isBoardFilled.postValue(true)
             } else {
-                currentPlayer.postValue(
+                _currentPlayer.postValue(
                     if (currentPlayerValue == Constants.CROSS)
                         Constants.ZERO
                     else
