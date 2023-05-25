@@ -16,4 +16,9 @@
     <string name="winner">Winner:</string>
     <string name="crosses">Crosses</string>
     <string name="zeroes">Zeroes</string>
+    <string name="select_image">Select avatar from gallery</string>
+    <string name="new_player_zeroes">New zeroes player</string>
+    <string name="new_player_crosses">New crosses player</string>
+    <string name="add_player">Add player</string>
+    <string name="hint_name">Input name</string>
 </resources>

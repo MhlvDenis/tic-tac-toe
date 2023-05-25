@@ -17,4 +17,9 @@
     <string name="winner">Победитель:</string>
     <string name="crosses">Крестики</string>
     <string name="zeroes">Нолики</string>
+    <string name="select_image">Выбрать аватар из галереи</string>
+    <string name="new_player_zeroes">Нолики: новый игрок</string>
+    <string name="new_player_crosses">Крестики: новый игрок</string>
+    <string name="add_player">Добавить игрока</string>
+    <string name="hint_name">Введите имя</string>
 </resources>
