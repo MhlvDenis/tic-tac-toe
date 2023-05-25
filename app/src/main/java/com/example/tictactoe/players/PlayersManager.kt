@@ -14,6 +14,4 @@ class PlayersManager {
         }
         players.add(player)
     }
-
-    fun getPlayers(): List<Player> = players
 }
