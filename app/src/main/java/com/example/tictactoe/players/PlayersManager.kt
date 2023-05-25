@@ -2,10 +2,16 @@ package com.example.tictactoe.players
 
 class PlayersManager {
     private val players = mutableListOf<Player>()
-    var firstCurrentPlayer: Player? = null
-    var secondCurrentPlayer: Player? = null
+    var crossesPlayer: Player? = Player("Denis")
+    var zeroesPlayer: Player? = Player("Vasya")
 
     fun addNewPlayer(player: Player) {
+        for (i in players.indices) {
+            if (players[i].name == player.name) {
+                players[i] = player
+                return
+            }
+        }
         players.add(player)
     }
 

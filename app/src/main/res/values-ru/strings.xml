@@ -15,4 +15,6 @@
     <string name="o_player">Нолики:</string>
     <string name="player_plug">Игрок</string>
     <string name="winner">Победитель:</string>
+    <string name="crosses">Крестики</string>
+    <string name="zeroes">Нолики</string>
 </resources>

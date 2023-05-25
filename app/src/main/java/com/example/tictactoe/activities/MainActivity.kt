@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
                 provideGameFinished(getString(R.string.zeroes_won))
             }
         })
-        mainViewModel.isBoardFilled.observe(this@MainActivity, Observer {
+        mainViewModel.isDraw.observe(this@MainActivity, Observer {
             val isBoardFilled = it ?: return@Observer
             if (isBoardFilled) {
                 provideGameFinished(getString(R.string.draw))

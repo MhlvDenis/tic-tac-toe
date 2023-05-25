@@ -4,6 +4,6 @@ import com.example.tictactoe.players.Player
 
 data class Record(
     val crossesPlayer: Player,
-    val zerosPlayer: Player,
+    val zeroesPlayer: Player,
     val winner: Player
 )

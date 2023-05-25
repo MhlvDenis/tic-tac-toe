@@ -14,4 +14,6 @@
     <string name="o_player">O player:</string>
     <string name="player_plug">Player</string>
     <string name="winner">Winner:</string>
+    <string name="crosses">Crosses</string>
+    <string name="zeroes">Zeroes</string>
 </resources>

@@ -24,7 +24,7 @@ class StatisticsAdapter @Inject constructor(
         val record = statisticsManager.getStatistics()[position]
         with (holder.binding) {
             xPlayer.text = record.crossesPlayer.name
-            oPlayer.text = record.zerosPlayer.name
+            oPlayer.text = record.zeroesPlayer.name
             winner.text = record.winner.name
         }
     }

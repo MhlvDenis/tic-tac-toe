@@ -35,46 +35,66 @@
         android:baselineAligned="false">
 
         <LinearLayout
-            android:layout_height="100dp"
+            android:layout_height="150dp"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:paddingEnd="3dp"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
             <Button
-                android:id="@+id/select_first_player"
+                android:id="@+id/select_crosses_player"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="0dp"
                 android:text="@string/select_player"
-                android:visibility="visible" />
+                android:visibility="visible"
+                android:layout_weight="5" />
 
             <ImageButton
-                android:id="@+id/select_first_player_img"
+                android:id="@+id/select_crosses_player_img"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:visibility="gone" />
+                android:layout_height="0dp"
+                android:visibility="gone"
+                android:layout_weight="5" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="@string/crosses"
+                android:textStyle="bold"
+                android:gravity="center" />
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_height="100dp"
+            android:layout_height="150dp"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:paddingStart="3dp"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
             <Button
-                android:id="@+id/select_second_player"
+                android:id="@+id/select_zeroes_player"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="5"
                 android:text="@string/select_player"
                 android:visibility="visible" />
 
             <ImageButton
-                android:id="@+id/select_second_player_img"
+                android:id="@+id/select_zeroes_player_img"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="5"
                 android:visibility="gone" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="@string/zeroes"
+                android:textStyle="bold"
+                android:gravity="center" />
 
         </LinearLayout>
         
