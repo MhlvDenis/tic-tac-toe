@@ -3,11 +3,14 @@ package com.example.tictactoe.activities
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.EditText
 import androidx.activity.viewModels
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.content.res.AppCompatResources
 import com.example.tictactoe.R
 import com.example.tictactoe.databinding.ActivityMenuBinding
+import com.example.tictactoe.players.Player
 import com.example.tictactoe.viewmodels.MenuViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -29,8 +32,36 @@ class MenuActivity : AppCompatActivity() {
         binding.scoreTable.setOnClickListener {
             startActivity(Intent(this, StatisticsActivity::class.java))
         }
+        binding.selectCrossesPlayer.setOnClickListener { provideSelectCrossesPlayer() }
+        binding.selectCrossesPlayerImg.setOnClickListener { provideSelectCrossesPlayer() }
+        binding.selectZeroesPlayer.setOnClickListener { provideSelectZeroesPlayer() }
+        binding.selectZeroesPlayerImg.setOnClickListener { provideSelectZeroesPlayer() }
         initCrossesPlayer()
         initZeroesPlayer()
+    }
+
+    private fun provideSelectCrossesPlayer() {
+        val input = EditText(this)
+        AlertDialog.Builder(this)
+            .setTitle("New crosses player")
+            .setView(input)
+            .setPositiveButton("Add player") { dialog, which ->
+                menuViewModel.addCrossesPlayer(Player(name = input.text.toString()))
+                initCrossesPlayer()
+            }
+            .show()
+    }
+
+    private fun provideSelectZeroesPlayer() {
+        val input = EditText(this)
+        AlertDialog.Builder(this)
+            .setTitle("New zeroes player")
+            .setView(input)
+            .setPositiveButton("Add player") { dialog, which ->
+                menuViewModel.addZeroesPlayer(Player(name = input.text.toString()))
+                initZeroesPlayer()
+            }
+            .show()
     }
 
     private fun initCrossesPlayer() {
